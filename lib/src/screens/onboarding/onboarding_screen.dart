@@ -24,7 +24,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
           body: Stack(
             children: [
               Positioned(
-                top: 50,
+                top: 40,
                 right: 0,
                 left: 0,
                 child: Center(
@@ -43,17 +43,21 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                 left: 24,
                 right: 24,
                 child: Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
                   children: [
-                    Text(
-                      "Connect with \nyour community wherever you are",
-                      textAlign: TextAlign.start,
-                      style: TextStyle(
-                        fontSize: 32,
-                        fontFamily: 'Aeonik',
-                        fontWeight: FontWeight.w700,
-                        color: Theme.of(context).colorScheme.onSecondary,
-                        height: 1.2,
-                        letterSpacing: -1,
+                    Align(
+                      alignment: AlignmentGeometry.topLeft,
+                      child: Text(
+                        "Connect with \nyour community \nwherever you are",
+                        textAlign: TextAlign.start,
+                        style: TextStyle(
+                          fontSize: 32,
+                          fontFamily: 'Aeonik',
+                          fontWeight: FontWeight.w700,
+                          color: Theme.of(context).colorScheme.onSecondary,
+                          height: 1.1,
+                          letterSpacing: -1,
+                        ),
                       ),
                     ),
                     20.verticalSpace,
@@ -88,7 +92,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                       'By signing up, you accept the Terms of Use and Privacy Policy of how we process your data.',
                       textAlign: TextAlign.center,
                       style: TextStyle(
-                        fontSize: 12.sp,
+                        fontSize: 12,
                         fontWeight: FontWeight.w400,
                         color: Theme.of(context).colorScheme.surface,
                       ),

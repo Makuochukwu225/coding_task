@@ -30,7 +30,7 @@ class CommunityInfo extends StatelessWidget {
             ),
           ],
         ),
-        12.verticalSpace,
+        8.verticalSpace,
         Row(
           children: [
             Row(
@@ -74,7 +74,7 @@ class CommunityInfo extends StatelessWidget {
             ),
           ],
         ),
-        12.verticalSpace,
+        8.verticalSpace,
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [

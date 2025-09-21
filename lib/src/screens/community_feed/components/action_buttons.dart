@@ -11,7 +11,7 @@ class ActionButtons extends StatelessWidget {
           padding: EdgeInsets.all(8.w),
           decoration: BoxDecoration(
             shape: BoxShape.circle,
-              border: Border.all(color: Color(0xff7a5af8).withAlpha(10)),
+            border: Border.all(color: Color(0xff7a5af8).withAlpha(25)),
           ),
           child: SvgPicture.asset('assets/icons/user-round-plus.svg'),
         ),
@@ -20,7 +20,7 @@ class ActionButtons extends StatelessWidget {
           padding: EdgeInsets.all(8.w),
           decoration: BoxDecoration(
             shape: BoxShape.circle,
-            border: Border.all(color: Color(0xff7a5af8).withAlpha(10)),
+            border: Border.all(color: Color(0xff7a5af8).withAlpha(25)),
           ),
           child: SvgPicture.asset('assets/icons/info.svg'),
         ),

@@ -7,7 +7,7 @@ class PostHeader extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.all(16.w),
+      padding: EdgeInsets.symmetric(horizontal: 16.h, vertical: 12.h),
       child: Row(
         children: [
           Container(
@@ -21,7 +21,7 @@ class PostHeader extends StatelessWidget {
               ),
             ),
           ),
-          SizedBox(width: 12.w),
+          8.horizontalSpace,
           Expanded(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -31,8 +31,8 @@ class PostHeader extends StatelessWidget {
                     Text(
                       post['username']!,
                       style: TextStyle(
-                        fontSize: 16.sp,
-                        fontWeight: FontWeight.w600,
+                        fontSize: 15.sp,
+                        fontWeight: FontWeight.w500,
                         color: AppColors.textPurple,
                       ),
                     ),
@@ -40,20 +40,22 @@ class PostHeader extends StatelessWidget {
                     Icon(Icons.verified, color: Colors.blue, size: 16.w),
                     SizedBox(width: 8.w),
                     Container(
-                      padding: EdgeInsets.symmetric(
-                        horizontal: 6.w,
-                        vertical: 2.h,
+                      alignment: Alignment.center,
+                      padding: EdgeInsets.only(
+                        left: 6.w,
+                        right: 6.w,
+                        bottom: 4.h,
                       ),
                       decoration: BoxDecoration(
-                        color: AppColors.textPurple.withAlpha(20),
-                        borderRadius: BorderRadius.circular(4.r),
+                        color: AppColors.iconPurple.withAlpha(25),
+                        borderRadius: BorderRadius.circular(8.r),
                       ),
                       child: Text(
                         post['role']!,
                         style: TextStyle(
-                          fontSize: 12.sp,
+                          fontSize: 8.sp,
                           color: AppColors.textPurple,
-                          fontWeight: FontWeight.w500,
+                          fontWeight: FontWeight.w400,
                         ),
                       ),
                     ),
@@ -63,8 +65,9 @@ class PostHeader extends StatelessWidget {
                 Text(
                   post['timeAgo']!,
                   style: TextStyle(
-                    fontSize: 14.sp,
+                    fontSize: 11.sp,
                     color: AppColors.textPurple,
+                    fontWeight: FontWeight.w400,
                   ),
                 ),
               ],

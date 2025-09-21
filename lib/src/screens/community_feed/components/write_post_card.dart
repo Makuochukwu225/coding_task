@@ -6,6 +6,7 @@ class WritePostCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      height: 72.h,
       margin: EdgeInsets.only(bottom: 12.h),
       decoration: BoxDecoration(
         color: Colors.white,
@@ -34,8 +35,8 @@ class WritePostCard extends StatelessWidget {
           // Text input section
           Expanded(
             child: Container(
-              height: 40.h,
-              padding: EdgeInsets.symmetric(horizontal: 8.2, vertical: 7.2),
+              height: double.infinity,
+              padding: EdgeInsets.symmetric(horizontal: 4.2.h, vertical: 4.2),
               decoration: BoxDecoration(
                 color: Colors.transparent,
                 border: Border.all(color: const Color(0xFFEBE9FE)),
@@ -45,7 +46,7 @@ class WritePostCard extends StatelessWidget {
                 children: [
                   // Photo icon
                   Container(
-                    padding: EdgeInsets.all(6.r),
+                    padding: EdgeInsets.all(4.r),
                     width: 25.6.w,
                     height: 25.6.h,
                     decoration: BoxDecoration(

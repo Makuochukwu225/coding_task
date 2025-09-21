@@ -15,18 +15,20 @@ class PostContent extends StatelessWidget {
             text: TextSpan(
               style: TextStyle(
                 fontSize: 15.sp,
+                wordSpacing: 1.8,
                 color: AppColors.textPurple,
+                fontWeight: FontWeight.w400,
                 height: 1.4,
               ),
               children: [
                 TextSpan(
                   text: post['content']!,
-                  style: TextStyle(fontWeight: FontWeight.w600),
+                  style: TextStyle(fontWeight: FontWeight.w400),
                 ),
               ],
             ),
           ),
-          SizedBox(height: 16.h),
+          12.verticalSpace,
         ],
       ),
     );

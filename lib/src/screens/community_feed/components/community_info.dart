@@ -30,7 +30,7 @@ class CommunityInfo extends StatelessWidget {
             ),
           ],
         ),
-        4.horizontalSpace,
+        12.verticalSpace,
         Row(
           children: [
             Row(
@@ -52,7 +52,7 @@ class CommunityInfo extends StatelessWidget {
                 ),
               ],
             ),
-            4.horizontalSpace,
+            8.horizontalSpace,
             Container(
               width: 3.w,
               height: 3.h,
@@ -61,20 +61,20 @@ class CommunityInfo extends StatelessWidget {
                 shape: BoxShape.circle,
               ),
             ),
-            4.horizontalSpace,
+            6.5.horizontalSpace,
             SvgPicture.asset(
               'assets/icons/users-round.svg',
               width: 16.w,
               height: 16.h,
             ),
-            4.horizontalSpace,
+            8.horizontalSpace,
             Text(
               'Local',
               style: TextStyle(color: Colors.white, fontSize: 14.sp),
             ),
           ],
         ),
-        SizedBox(height: 12.h),
+        12.verticalSpace,
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [

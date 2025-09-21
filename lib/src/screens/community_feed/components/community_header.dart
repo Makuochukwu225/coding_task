@@ -6,7 +6,7 @@ class CommunityHeader extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 280.h,
+      height: 200.h,
       decoration: BoxDecoration(
         image: DecorationImage(
           image: AssetImage('assets/images/cover_image.png'),
@@ -27,7 +27,7 @@ class CommunityHeader extends StatelessWidget {
           Positioned(
             left: 16.w,
             right: 16.w,
-            bottom: 16.h,
+            bottom: 65.h,
             child: CommunityInfo(),
           ),
         ],

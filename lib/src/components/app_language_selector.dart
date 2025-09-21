@@ -117,8 +117,7 @@ class _LanguageBottomSheet extends StatelessWidget {
                   'Select your preferred language',
                   style: TextStyle(
                     fontSize: 15.sp,
-                    fontWeight: FontWeight.w700,
-                    fontStyle: FontStyle.normal,
+                    fontWeight: FontWeight.w500,
                     color: AppColors.textPurple,
                   ),
                 ),
@@ -148,7 +147,7 @@ class _LanguageBottomSheet extends StatelessWidget {
               // physics: const NeverScrollableScrollPhysics(),
               itemCount: languages.length,
               separatorBuilder: (context, index) =>
-                  Divider(height: 1, color: Colors.grey[200]),
+                  Divider(height: 1, color: AppColors.borderColor),
               itemBuilder: (context, index) {
                 final language = languages[index];
                 final isSelected =
@@ -165,14 +164,24 @@ class _LanguageBottomSheet extends StatelessWidget {
                       color: AppColors.textPurple,
                     ),
                   ),
+                  trailing: CustomRadioButton(isActive: isSelected),
 
-                  trailing: isSelected
-                      ? Icon(
-                          Icons.check_circle,
-                          color: AppColors.primaryButton,
-                          size: 20.w,
-                        )
-                      : null,
+                  // trailing: Theme(
+                  //   data: Theme.of(context).copyWith(
+                  //     unselectedWidgetColor:
+                  //         AppColors.textPurple, // unselected color
+                  //   ),
+                  //   child: Radio<String>(
+                  //     value: '${language['name']!} (${language['code']!})',
+                  //     groupValue: currentLanguage,
+                  //     activeColor: AppColors.textPurple, // selected color
+                  //     onChanged: (value) {
+                  //       // 👈 this is required
+                  //       onLanguageSelected(value!);
+                  //       Navigator.pop(context);
+                  //     },
+                  //   ),
+                  // ),
                   onTap: () {
                     onLanguageSelected(
                       '${language['name']!} (${language['code']!})',

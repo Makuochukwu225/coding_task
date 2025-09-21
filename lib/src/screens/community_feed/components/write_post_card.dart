@@ -6,7 +6,7 @@ class WritePostCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.only(bottom: 16.h),
+      margin: EdgeInsets.only(bottom: 12.h),
       decoration: BoxDecoration(
         color: Colors.white,
         border: Border(
@@ -14,12 +14,13 @@ class WritePostCard extends StatelessWidget {
           bottom: BorderSide(color: Colors.grey.withAlpha(50), width: 1),
         ),
       ),
-      padding: EdgeInsets.all(16.w),
+      padding: EdgeInsets.all(16.r),
       child: Row(
         children: [
+          // Avatar
           Container(
-            width: 36.w,
-            height: 36.h,
+            width: 40.w,
+            height: 40.w,
             decoration: BoxDecoration(
               shape: BoxShape.circle,
               image: DecorationImage(
@@ -28,59 +29,81 @@ class WritePostCard extends StatelessWidget {
               ),
             ),
           ),
-          SizedBox(width: 12.w),
+          8.horizontalSpace,
+
+          // Text input section
           Expanded(
             child: Container(
-              // height: 40.h,
+              height: 40.h,
               padding: EdgeInsets.symmetric(horizontal: 8.2, vertical: 7.2),
               decoration: BoxDecoration(
                 color: Colors.transparent,
-                border: Border.all(color: Color(0xFFEBE9FE)),
+                border: Border.all(color: const Color(0xFFEBE9FE)),
                 borderRadius: BorderRadius.circular(20),
               ),
               child: Row(
                 children: [
+                  // Photo icon
                   Container(
-                    padding: EdgeInsets.all(6.w),
+                    padding: EdgeInsets.all(6.r),
+                    width: 25.6.w,
+                    height: 25.6.h,
                     decoration: BoxDecoration(
-                      border: Border.all(color: Color(0xFFEBE9FE)),
+                      border: Border.all(color: const Color(0xFFEBE9FE)),
                       shape: BoxShape.circle,
                     ),
                     child: SvgPicture.asset(
                       'assets/icons/tabler_photo.svg',
-                      colorFilter: ColorFilter.mode(
+                      width: 12.8.w,
+                      height: 12.8.h,
+                      colorFilter: const ColorFilter.mode(
                         Color(0xFFEBE9FE),
+
                         BlendMode.srcIn,
                       ),
                     ),
                   ),
                   SizedBox(width: 8.w),
-                  Align(
-                    alignment: Alignment.centerLeft,
-                    child: Text(
-                      'Write something...',
-                      style: TextStyle(
-                        fontSize: 14.sp,
-                        color: Color(0xFFEBE9FE),
-                        fontWeight: FontWeight.w400,
+
+                  // Real input field
+                  Expanded(
+                    child: TextField(
+                      decoration: InputDecoration(
+                        isDense: true,
+                        contentPadding: EdgeInsets.zero,
+                        border: InputBorder.none,
+                        hintText: 'Write something...',
+                        hintStyle: TextStyle(
+                          fontSize: 14.sp,
+                          color: const Color(0xFFEBE9FE),
+                          fontWeight: FontWeight.w400,
+                        ),
                       ),
+                      style: TextStyle(fontSize: 14.sp, color: Colors.black),
                     ),
                   ),
                 ],
               ),
             ),
           ),
-          SizedBox(width: 12.w),
+
+          8.horizontalSpace,
+
+          // Send button
           Container(
+            width: 40.w,
+            height: 40.w,
             padding: EdgeInsets.all(13.w),
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
               color: Color(0xFFEBE9FE),
               shape: BoxShape.circle,
             ),
-
             child: SvgPicture.asset(
               'assets/icons/send.svg',
-              colorFilter: ColorFilter.mode(Colors.white, BlendMode.srcIn),
+              colorFilter: const ColorFilter.mode(
+                Colors.white,
+                BlendMode.srcIn,
+              ),
             ),
           ),
         ],

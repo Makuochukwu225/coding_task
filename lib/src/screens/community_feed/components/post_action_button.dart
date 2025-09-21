@@ -24,7 +24,7 @@ class PostActionButton extends StatelessWidget {
           SvgPicture.asset(
             icon,
             colorFilter: ColorFilter.mode(
-              AppColors.secondaryButton,
+              AppColors.textPurple,
               BlendMode.srcIn,
             ),
           ),
@@ -33,7 +33,7 @@ class PostActionButton extends StatelessWidget {
             text,
             style: TextStyle(
               fontSize: 14.sp,
-              color: AppColors.secondaryButton,
+              color: AppColors.textPurple,
               fontWeight: FontWeight.w500,
             ),
           ),
@@ -42,3 +42,4 @@ class PostActionButton extends StatelessWidget {
     );
   }
 }
+// #2C0A84

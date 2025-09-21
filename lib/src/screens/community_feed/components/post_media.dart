@@ -11,7 +11,7 @@ class PostMedia extends StatelessWidget {
       width: double.infinity,
       margin: EdgeInsets.symmetric(horizontal: 16.w),
       decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(8.r),
+        borderRadius: BorderRadius.circular(12.r),
         image: DecorationImage(
           image: AssetImage('assets/images/post_image.png'),
           fit: BoxFit.cover,
@@ -26,7 +26,7 @@ class PostMedia extends StatelessWidget {
               padding: EdgeInsets.symmetric(horizontal: 8.w, vertical: 4.h),
               decoration: BoxDecoration(
                 color: Colors.black.withAlpha(70),
-                borderRadius: BorderRadius.circular(12.r),
+                borderRadius: BorderRadius.circular(4.r),
               ),
               child: Text(
                 '0:59',
@@ -42,13 +42,14 @@ class PostMedia extends StatelessWidget {
             bottom: 8.h,
             right: 8.w,
             child: Container(
-              width: 24.w,
+              // width: 24.w,
+              padding: EdgeInsets.symmetric(horizontal: 4, vertical: 2),
               height: 24.h,
               decoration: BoxDecoration(
                 color: Colors.black.withAlpha(70),
-                shape: BoxShape.circle,
+                borderRadius: BorderRadius.circular(4),
               ),
-              child: Icon(Icons.volume_up, color: Colors.white, size: 14.w),
+              child: SvgPicture.asset('assets/icons/volume-x.svg'),
             ),
           ),
         ],

@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
       title: 'coding_task',
       theme: AppTheme.lightTheme,
       home: ScreenUtilInit(
-        designSize: const Size(375, 812),
+        designSize: const Size(390, 844),
         minTextAdapt: true,
         splitScreenMode: true,
         builder: (_, child) {

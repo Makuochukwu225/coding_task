@@ -21,7 +21,7 @@ class SocialButton extends StatelessWidget {
       height: 48.h,
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(
-          backgroundColor: _getBackgroundColor(),
+          backgroundColor: _getBackgroundColor(context),
           foregroundColor: _getTextColor(),
           padding: EdgeInsets.symmetric(vertical: 12.h),
           shape: RoundedRectangleBorder(
@@ -46,12 +46,12 @@ class SocialButton extends StatelessWidget {
     );
   }
 
-  Color _getBackgroundColor() {
+  Color _getBackgroundColor(BuildContext context) {
     switch (type) {
       case SocialButtonType.google:
-        return AppColors.primaryButton;
+        return Theme.of(context).colorScheme.primary;
       case SocialButtonType.apple:
-        return AppColors.secondaryButton;
+        return Theme.of(context).colorScheme.secondary;
       case SocialButtonType.email:
         return Colors.transparent;
       case SocialButtonType.primary:

@@ -17,7 +17,7 @@ class CommunityInfo extends StatelessWidget {
             Text(
               'Ekwalé People',
               style: TextStyle(
-                color: Colors.white,
+                color: Theme.of(context).colorScheme.surface,
                 fontSize: 22.sp,
                 fontWeight: FontWeight.w700,
               ),
@@ -45,7 +45,7 @@ class CommunityInfo extends StatelessWidget {
                 Text(
                   'Nigerian',
                   style: TextStyle(
-                    color: Colors.white,
+                    color: Theme.of(context).colorScheme.surface,
                     fontSize: 12.sp,
                     fontWeight: FontWeight.w500,
                   ),
@@ -57,7 +57,7 @@ class CommunityInfo extends StatelessWidget {
               width: 3.w,
               height: 3.h,
               decoration: BoxDecoration(
-                color: Colors.white,
+                color: Theme.of(context).colorScheme.surface,
                 shape: BoxShape.circle,
               ),
             ),
@@ -85,7 +85,7 @@ class CommunityInfo extends StatelessWidget {
                 Text(
                   '170 members',
                   style: TextStyle(
-                    color: Colors.white,
+                    color: Theme.of(context).colorScheme.surface,
                     fontSize: 15.sp,
                     fontWeight: FontWeight.w400,
                   ),

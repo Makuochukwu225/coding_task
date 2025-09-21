@@ -9,5 +9,3 @@ class AppColors {
   static const Color iconPurple = Color(0xFF7A5AF8);
   static const Color borderColor = Color(0xFFFAFAFF);
 }
-// #7A5AF81A
-// #FAFAFF

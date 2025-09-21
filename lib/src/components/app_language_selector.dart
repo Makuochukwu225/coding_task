@@ -84,7 +84,7 @@ class _LanguageBottomSheet extends StatelessWidget {
     return Container(
       height: 400.h,
       decoration: BoxDecoration(
-        color: Colors.white,
+        color: Theme.of(context).colorScheme.surface,
         borderRadius: BorderRadius.only(
           topLeft: Radius.circular(20.r),
           topRight: Radius.circular(20.r),
@@ -99,7 +99,7 @@ class _LanguageBottomSheet extends StatelessWidget {
             height: 4.h,
             margin: EdgeInsets.symmetric(vertical: 12.h),
             decoration: BoxDecoration(
-              color: Colors.grey[300],
+              color: Theme.of(context).colorScheme.inversePrimary.withAlpha(25),
               borderRadius: BorderRadius.circular(2.r),
             ),
           ),
@@ -118,7 +118,7 @@ class _LanguageBottomSheet extends StatelessWidget {
                   style: TextStyle(
                     fontSize: 15.sp,
                     fontWeight: FontWeight.w500,
-                    color: AppColors.textPurple,
+                    color: Theme.of(context).colorScheme.onTertiary,
                   ),
                 ),
                 InkWell(
@@ -146,8 +146,10 @@ class _LanguageBottomSheet extends StatelessWidget {
               shrinkWrap: true,
               // physics: const NeverScrollableScrollPhysics(),
               itemCount: languages.length,
-              separatorBuilder: (context, index) =>
-                  Divider(height: 1, color: AppColors.borderColor),
+              separatorBuilder: (context, index) => Divider(
+                height: 1,
+                color: Theme.of(context).colorScheme.outline,
+              ),
               itemBuilder: (context, index) {
                 final language = languages[index];
                 final isSelected =
@@ -161,27 +163,10 @@ class _LanguageBottomSheet extends StatelessWidget {
                     style: TextStyle(
                       fontSize: 15.sp,
                       fontWeight: FontWeight.w400,
-                      color: AppColors.textPurple,
+                      color: Theme.of(context).colorScheme.onTertiary,
                     ),
                   ),
                   trailing: CustomRadioButton(isActive: isSelected),
-
-                  // trailing: Theme(
-                  //   data: Theme.of(context).copyWith(
-                  //     unselectedWidgetColor:
-                  //         AppColors.textPurple, // unselected color
-                  //   ),
-                  //   child: Radio<String>(
-                  //     value: '${language['name']!} (${language['code']!})',
-                  //     groupValue: currentLanguage,
-                  //     activeColor: AppColors.textPurple, // selected color
-                  //     onChanged: (value) {
-                  //       // 👈 this is required
-                  //       onLanguageSelected(value!);
-                  //       Navigator.pop(context);
-                  //     },
-                  //   ),
-                  // ),
                   onTap: () {
                     onLanguageSelected(
                       '${language['name']!} (${language['code']!})',

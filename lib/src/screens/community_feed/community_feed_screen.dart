@@ -67,8 +67,10 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen>
                 text,
                 style: TextStyle(
                   fontSize: 15.sp,
-                  fontWeight: FontWeight.w600,
-                  color: isSelected ? Color(0xFF6B46C1) : Color(0xFFD1D5DB),
+                  fontWeight: FontWeight.w500,
+                  color: isSelected
+                      ? Theme.of(context).colorScheme.onTertiary
+                      : Theme.of(context).colorScheme.onTertiary.withAlpha(25),
                 ),
               ),
               if (isSelected)
@@ -76,7 +78,7 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen>
                   padding: EdgeInsets.only(left: 0),
                   child: Icon(
                     Icons.keyboard_arrow_down,
-                    color: Color(0xFF6B46C1),
+                    color: Theme.of(context).colorScheme.onTertiary,
                     size: 20,
                   ),
                 ),
@@ -107,7 +109,9 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen>
                             child: Container(
                               margin: EdgeInsets.all(8),
                               decoration: BoxDecoration(
-                                color: AppColors.iconPurple,
+                                color: Theme.of(
+                                  context,
+                                ).colorScheme.inversePrimary,
                                 shape: BoxShape.circle,
                               ),
                               child: SvgPicture.asset(
